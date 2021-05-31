@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>setting</title>
+        <link type="text/css" rel="stylesheet" href="../css/basic.css">
+        <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+        <style>
+            iframe {
+                display: inline-block;
+                border: 2px solid #44564A;
+                margin-top: 10px;
+            }
+            iframe.nav {
+                width: 200px;
+                height: 530px;
+                border-right: 2px solid #44564A;
+            }
+            iframe.content {
+                width: 390px;
+                height: 530px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="title"><a href="/">My WebPage</a> - Setting</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/login" target="_self">login</a></li>
+                <li><a href="/github" target="_blank">github</a></li>
+                <li><a href="/setting">setting</a></li>
+                <li><a href="/etc">etc</a></li>
+            </ul>
+        </nav>
+        <section>
+            <iframe src="/setting_nav" class="nav" name="nav"></iframe>
+            <iframe src="/setting_content" class="content" name="content"></iframe>
+        </section>
+    </body>
+</html>

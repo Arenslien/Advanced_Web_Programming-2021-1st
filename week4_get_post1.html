@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Node js 웹 서버</title>
+        <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/nodejs">Node js란?</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h1>Node.js로 만든 웹 서버</h1>
+                <h3>웹 관련 기술을 입력하면 개발자 이름을 알 수 있습니다.</h3>
+                <p>(예: nodejs, www, tcpip)</p>
+                <div>
+                    <form id="form">
+                        <input type="text" id="input1">
+                        <button type="submit">입력 완료</button>
+                    </form>
+                </div>
+                <p>개발자: <span id="answer"></span></p>
+            </article>
+        </section>
+
+        <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./week4_front2.js"></script>
+    </body>
+</html>

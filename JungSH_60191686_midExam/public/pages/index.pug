@@ -1,0 +1,75 @@
+doctype html
+html
+    head
+        title 고급웹프 / 중간고사과제
+        meta(charset="UTF-8")
+        meta(name="Author" content="Sunghoon Jung")
+        link(type="text/css" rel="stylesheet" href="../css/basic.css")
+        link(rel="icon" href="data:;base64,iVB0Rw0KGfo=")
+        style.
+            div.explain-box {
+                background: rgb(212, 212, 212);
+                width: 90%;
+                margin: 30px;
+                //- padding: 50px;
+                //- overflow-x: scroll;
+            }
+            div.explain-box > ul {
+                padding-bottom: 20px;
+            }
+            div.explain-box > ul h4 {
+                padding-top: 20px;
+                font-size: 1.2em;
+            }
+            div.explain-box > ul > li {
+                margin: 0px 35px 20px 25px;
+            }
+            div.project-box {
+                width: 500px;
+                height: 500px;
+                background-image: url("../images/Illena_AI.png");
+                background-size: 500px 500px;
+                transition: box-shadow 0.3s ease-in-out;
+                transform-style: preserve-3d;
+                perspective: 700px;
+            }
+            input {
+                display: block;
+                width: 250px;
+                height: 50px;
+                border: none;
+            }
+            input[type=submit] {
+                margin: auto;
+                background: #508164;
+                color: white;
+                width: 270px;
+            }
+    body
+        header
+            h1.title
+                a(href="/") My WebPage
+        nav
+            ul
+                li
+                    a(href="/login" target="_self") login
+                li
+                    a(href="/github" target="_self") github
+                li
+                    a(href="/setting" target="_self") setting
+                li
+                    a(href="/etc" target="_self") etc
+        section
+            h2.subtitle New Update!
+            div.explain-box
+                ul
+                    h4 [#{update.version}] 업데이트 사항
+                    each content in update.content
+                        li #{content}
+            h2.subtitle 프로젝트
+            div.explain-box(id="project-list")
+            script(src="http://unpkg.com/axios/dist/axios.min.js")
+            script(src="../server/front_project.js")
+            
+            form#project_form(action="/project" method="POST")
+                input#project_add_button(type="submit" value="프로젝트 추가")

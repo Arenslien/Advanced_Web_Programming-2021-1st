@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link type="text/css" rel="stylesheet" href="../css/basic.css">
+        <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+        <style>
+            body {
+                background: #508164;
+            }
+            fieldset.login {
+                background: white;
+                margin: 60px auto auto auto;
+                width: 300px;
+                height: 300px;
+                border: none;
+                box-shadow: 0px 0px 15px #000000;
+                padding: 30px;
+            }
+            input {
+                display: block;
+                width: 250px;
+                height: 50px;
+                border: none;
+            }
+            input[type=text], input[type=password]{
+                margin: 20px;
+                background: #dddddd93;
+                border-radius: 2px;
+                padding-left: 20px;
+            }
+            input[type=submit] {
+                margin: auto;
+                background: #508164;
+                color: white;
+                width: 270px;
+            }
+            input[type=submit]:hover {
+                cursor: pointer;
+            }
+            p.sign-up {
+                text-align: center;
+            }
+            p > a {
+                color: #2fa75f;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="title"><a href="/">My WebPage</a> - Login</h1>
+        </header>
+        <section>
+            <form id="login_form">
+                <fieldset class="login">
+                    <input id="id" type="text" placeholder="ID">
+                    <input id="password" type="password" placeholder="Password">
+                    <input id="login_button" type="submit" value="Login">
+                    <p class="sign-up">Not registered? <a href="/sign-up" target="_self">Create an account!</a></p>
+                </fieldset>
+            </form>
+        </section>
+
+        <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../server/front.js"></script>
+    </body>
+</html>

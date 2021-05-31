@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title= title
+    body
+        h1= title
+        include nav
+        div
+            form#form(action="/upload" method="post" enctype="multipart/form-data") 
+                label Image File
+                    input(type="file" name="image1")
+                br
+                label Image File 2
+                    input(type="file" name="image2")
+                br
+                label Image File 3
+                    input(type="file" name="image3")
+                br
+                label Image Title
+                    input(type="text" name="title")
+                p  
+                button(type="submit") 제출
+
+        p Main Page
+        include footer

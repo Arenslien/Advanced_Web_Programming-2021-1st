@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>정성훈/60191686/고급웹프로그래밍 과제 1</title>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Sunghoon Jung">
+        <link type="text/css" rel="stylesheet" href="../css/basic.css">
+        <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+        <style>
+            div.explain-box {
+                background: rgb(212, 212, 212);
+                width: 90%;
+                margin: 30px;
+            }
+            div.explain-box > ul {
+                padding-bottom: 20px;
+            }
+            div.explain-box > ul h4 {
+                padding-top: 20px;
+                font-size: 1.2em;
+            }
+            div.explain-box > ul > li {
+                margin: 0px 35px 20px 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="title"><a href="./">My WebPage</a></h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/login" target="_self">login</a></li>
+                <li><a href="/github" target="_blank">github</a></li>
+                <li><a href="/setting">setting</a></li>
+                <li><a href="/etc">etc</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2 class="subtitle">New Update!</h2>
+            <div class="explain-box">
+                <ul>
+                    <h4>업데이트 사항</h4>
+                    <li>
+                        <b>Node.js</b>를 활용한 서버 기능이 추가되었습니다.
+                    </li>
+                    <li>
+                        <b>로그인</b>기능이 <b>추가</b>되었습니다.
+                    </li>
+                    <li>
+                        <b>admin</b> 계정만 <b>로그인</b> 가능합니다. ID: admin PW: master
+                    </li>
+                </ul>
+            </div>
+            <h2 class="subtitle">문법</h2><br>
+            <div class="explain-box">
+                <ul>
+                    <h4>핵심 문법</h4>
+                    <li>fs.readFile();</li>
+                    <li>res.writeHead(200, { "Content-Type" : "text/html; charset=utf-8" });</li>
+                    <li>JSON.parse();</li>
+                    <li>location.href = "/";</li>
+                    <li>req.on('data', (data) => {});</li>
+                </ul>
+            </div>
+        </section>
+    </body>
+</html>

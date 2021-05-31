@@ -1,0 +1,48 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    // 객체 방식
+    axios ({
+        method: 'get',
+        url: 'https://jsonplaceholder.typicode.com/todos?userId=5'
+    })
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.error(error)
+    })
+
+    // method 방식
+    axios.get('https://jsonplaceholder.typicode.com/todos?userId=5')
+        .then((result) => {
+            console.log(result);
+        })
+        .catch((e) => {
+            console.error(e);
+        })
+    
+    // async / await
+    async function axiosGet() {
+        try {
+            const result = await axios.get('https://jsonplaceholder.typicode.com/todos?userId=5');
+            console.log(result);
+        } catch(e) {
+            console.error(e);
+        }
+    }
+    axiosGet();
+
+    // axios post
+    async function axiosPost() {
+        try {
+            const result = await axios.post('https://jsonplaceholder.typicode.com/todos', {
+                title: 'Study Axios',
+                completed: false
+            });
+            console.log(result.data);
+        } catch(e) {
+            console.error(e);
+        }
+    }
+    axiosPost();
+</script>
