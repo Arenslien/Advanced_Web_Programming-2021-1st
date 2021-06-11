@@ -14,6 +14,7 @@ dotenv.config();
 // Import pageRouter
 const pageRouter = require('./routes/page');
 const authRouter = require('./routes/auth');
+const postRouter = require('./routes/post');
 
 // passport 설정 모듈
 const passportConfig = require('./passport');
@@ -30,6 +31,7 @@ nunjucks.configure('views', {
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/img', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
@@ -48,11 +50,12 @@ app.use(passport.session());
 
 app.use('/', pageRouter);
 app.use('/auth', authRouter);
+app.use('/post', postRouter);
 
 // sequelize
 const { sequelize } = require("./models");
 
-sequelize.sync({ force: true })
+sequelize.sync({ force: false })
 .then(() => {
     console.log("데이터베이스 연결 성공");
 })

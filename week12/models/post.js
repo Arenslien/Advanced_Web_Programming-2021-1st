@@ -3,18 +3,18 @@ const Sequelize = require('sequelize');
 module.exports = class Post extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
-            Post: {
-                type: Sequelize.STRING(100),
+            content: {
+                type: Sequelize.STRING(140),
                 allowNull: false,
             },
-            created_at: {
-                type: Sequelize.DATE,
+            img: {
+                type: Sequelize.STRING(200),
                 allowNull: true,
-                defaultValue: Sequelize.NOW,
-            }
+            },
         }, {
             sequelize,
-            timestamps: false,
+            timestamps: true,
+            underscored: false,
             modelName: 'Post',
             tableName: 'posts',
             paranoid: false,

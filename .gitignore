@@ -1,0 +1,9 @@
+# Ignore File
+
+# directory
+node_modules/
+config/
+
+# file
+.env
+config.json

@@ -13,6 +13,7 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
         if (exUser) {
             return res.redirect('/join?error=exist');
         }
+        console.info("___User.create(): " + nick);
         const hash = await bcrypt.hash(password, 12);
         await User.create({
            email,
@@ -28,6 +29,7 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
 
 router.post('/login', isNotLoggedIn, (req, res, next) => {
     passport.authenticate('local', (authError, user, info) => {
+        console.info("___passport.authenticate()");
         if (authError) {
             console.error(authError);
             return next(authError);
@@ -35,6 +37,7 @@ router.post('/login', isNotLoggedIn, (req, res, next) => {
         if (!user) {
             return res.redirect(`/?loginError=${info.message}`);
         }
+        console.info("___req.login()");
         return req.login(user, (loginError) => {
             if (loginError) {
                 console.error(loginError);
@@ -50,5 +53,14 @@ router.get('/logout', isLoggedIn, (req, res, next) => {
     req.session.destroy();
     res.redirect('/');
 });
+
+router.get('/kakao', passport.authenticate('kakao'));
+
+router.get('/kakao/callback', passport.authenticate('kakao', {
+    failureRedirect: '/',
+}), (req, res) => {
+    res.redirect('/');
+});
+
 
 module.exports = router;
