@@ -1,0 +1,63 @@
+body {
+    background: #508164;
+}
+div#form_box {
+    background: white;
+    margin: 100px auto;
+    width: 270px;
+    border: none;
+    box-shadow: 0px 0px 15px #000000;
+    padding: 50px;
+}
+
+input {
+    width: 250px;
+    height: 50px;
+    border: none;
+    margin: 0px 0px 20px 0px;
+    background: #dddddd93;
+    border-radius: 2px;
+    padding-left: 20px;
+}
+
+button {
+    width: 270px;
+    height: 35px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+    background: #508164;
+    color: white;
+}
+
+div#google_login {
+    width: 270px;
+    height: 35px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+    background: white;
+    color: #555555;
+    text-align: center;
+    line-height: 35px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+p.center {
+    text-align: center;
+}
+
+p a {
+    color: #2fa75f;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign-in</title>
+    <link type="text/css" rel="stylesheet" href="../css/base.css">
+    <link type="text/css" rel="stylesheet" href="../css/auth.css">
+    <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+</head>
+
+<body>
+    <section>
+        <div id="form_box">
+            <form id="login_form" action="/auth/sign-in" onsubmit="return validifyForm()" method="POST">
+                <p>ID</p>
+                <input id="id" type="text" placeholder="ID" name="id">
+                <p>Password</p>
+                <input id="password" type="password" placeholder="Password" name="password">
+                <button id="local_login" type="submit">Sign in</button>
+                <p class="center">or</p>
+            </form>
+            <div id="google_login">
+                <a href="/auth/google">Sign in with Google</a>
+            </div>
+            <p class="center">Not registered?
+                <a href="/auth/sign-up" target="_self"> Create an account!</a>
+            </p>
+        </div>
+        
+    </section>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/sign-in.js"></script>
+</body>
+
+</html>

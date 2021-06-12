@@ -61,7 +61,8 @@ sequelize.sync({ force: false })
 })
 .catch((err) => {
         console.error(err);
-    });
+});
+
 app.use('/', pageRouter);
 
 app.use((req, res, next) => {

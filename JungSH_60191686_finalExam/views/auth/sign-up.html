@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link type="text/css" rel="stylesheet" href="../css/base.css">
+    <link type="text/css" rel="stylesheet" href="../css/auth.css">
+    <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+</head>
+
+<body>
+    <section>
+        <div id="form_box">
+            <form id="sign_up_form" action="/auth/sign-up" onsubmit="return validifyForm()" method="POST">
+                <p>Name</p>
+                <input type="text" placeholder="name" name="name">
+                <p>ID</p>
+                <input type="text" placeholder="id" name="id">
+                <p>Password</p>
+                <input type="password" placeholder="Password" name="password">
+                <p>Confirm Password</p>
+                <input type="password" placeholder="Confirm Password" name="confirm"><button id="sign-up" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/sign-up.js"></script>
+</body>
+
+</html>
