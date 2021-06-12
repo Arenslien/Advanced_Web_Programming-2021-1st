@@ -26,7 +26,7 @@ module.exports = class User extends Sequelize.Model {
             timestamps: true,
             underscored: false,
             modelName: 'User',
-            tableName: 'users',
+            tableName: 'user',
             paranoid: true,
             charset: 'utf8',
             collate: 'utf8_general_ci',
@@ -34,6 +34,7 @@ module.exports = class User extends Sequelize.Model {
     }
 
     static associate(db) {
-        // db.User.hasMany(db.Post);
+        db.User.hasMany(db.Project, { foreignKey: 'user', sourceKey: 'id'} );
+        db.User.hasMany(db.Skill, { foreignKey: 'user', sourceKey: 'id' });
     }
 };

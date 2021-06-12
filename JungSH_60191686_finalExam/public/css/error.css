@@ -1,0 +1,9 @@
+main {
+    padding: 30px;
+}
+
+h1, h2, pre {
+    color: white;
+    word-break: break-all;
+}
+

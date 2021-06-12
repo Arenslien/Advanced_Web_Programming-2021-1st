@@ -12,7 +12,6 @@ module.exports = () => {
       callbackURL: "http://localhost:3000/auth/google/callback"
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log('google profile', profile);
       try {
         const exUser = await User.findOne({
             where: { userID: profile.emails[0].value, provider: 'google'},

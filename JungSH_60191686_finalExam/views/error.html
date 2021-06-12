@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html>
+{% extends 'layout.html' %}
 
-<head>
-    <title>ERROR!</title>
-    <meta charset="UTF-8">
-    <meta name="Author" content="Sunghoon Jung">
-    <link type="text/css" rel="stylesheet" href="../css/base.css">
-    <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
-</head>
+{% block style %}
+<link type="text/css" rel="stylesheet" href="../css/error.css">
+{% endblock %}
 
-<body>
-    <header>
-        <h1 class="title"><a href="/">My WebPage</a></h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="/login" target="_self">login</a></li>
-            <li><a href="/github" target="_self">github</a></li>
-            <li><a href="/setting" target="_self">setting</a></li>
-            <li><a href="/etc" target="_self">etc</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2 class="subtitle">NOT FOUND 404</h2>
-    </section>
-</body>
-
-</html>
+{% block main %}
+  <h1>ERROR: {{message}}</h1><br>
+  <h2>STATUS: {{error.status}}</h2><br>
+  <pre>STACK: {{error.stack}}</pre>
+{% endblock %}

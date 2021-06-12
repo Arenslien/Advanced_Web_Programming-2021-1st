@@ -11,6 +11,8 @@ const path = require('path');
 // Import Router
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
+const projectRouter = require('./routes/project');
+const skillRouter = require('./routes/skill');
 
 // Import Sequelize
 const { sequelize } = require('./models');
@@ -35,6 +37,7 @@ nunjucks.configure('views', {
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'front')));
+app.use(express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
@@ -69,6 +72,9 @@ sequelize.sync({ force: false })
 // Conneting Router
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
+app.use('/project', projectRouter);
+app.use('/skill', skillRouter);
+
 
 // ERROR
 app.use((req, res, next) => {

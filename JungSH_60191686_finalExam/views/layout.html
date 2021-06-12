@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>고급웹프 / 기말 프로젝트</title>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Sunghoon Jung">
+    <link type="text/css" rel="stylesheet" href="../css/base.css">
+    <link type="text/css" rel="stylesheet" href="../css/nav.css">
+    <link rel="icon" href="data:;base64,iVB0Rw0KGfo=">
+    {% block style %}
+    {% endblock %}
+</head>
+
+<body>
+    {% include "nav.html" %}
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    {% block script %}
+    {% endblock %}
+</body>
+
+</html>

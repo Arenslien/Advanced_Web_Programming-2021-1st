@@ -1,6 +1,11 @@
 body {
-    background: #508164;
+    background: #222;
 }
+
+p {
+    color: black;
+}
+
 div#form_box {
     background: white;
     margin: 100px auto;
@@ -26,8 +31,8 @@ button {
     border: none;
     margin-bottom: 10px;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px gray;
-    background: #508164;
+    box-shadow: 4px 4px 3px gray;
+    background: #222;
     color: white;
 }
 
@@ -37,7 +42,7 @@ div#google_login {
     border: none;
     margin-bottom: 10px;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px gray;
+    box-shadow: 4px 4px 4px gray;
     background: white;
     color: #555555;
     text-align: center;
@@ -60,4 +65,9 @@ p.center {
 p a {
     color: #2fa75f;
     font-weight: bold;
+    text-decoration: none;
+}
+div#google_login a {
+    color: black;
+    text-decoration: none;
 }

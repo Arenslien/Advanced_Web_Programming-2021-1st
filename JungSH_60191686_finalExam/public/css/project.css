@@ -1,0 +1,72 @@
+/* project css 공통 */
+section {
+    padding: 30px;
+}
+h1 {
+    font-size: 100px;
+}
+h2 {
+    font-size: 50px;
+}
+
+/* project - index.html에 대한 css */
+button#add_project {
+    width: 400px;
+    height: 100px;
+    border: none;
+    font-size: 50px;
+    transition: all ease 200ms 100ms;
+    margin: 50px 0px;
+}
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* addProject.html에 대한 css */
+form {
+    background: white;
+    margin: 0px auto;
+    margin-top: 30px;
+    width: 1100px;
+    border: none;
+    box-shadow: 0px 0px 15px #000000;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+input {
+    width: 1020px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+input[type='text'], input[type='url'] {
+    padding-left: 20px;
+    border: #333 solid;
+    border-radius: 5px;
+    background: #dddddd93;
+}
+input[type='file'] {
+    margin-bottom: 10px;
+    display: block;
+    color: black;
+}
+
+button#addProject {
+    width: 1020px;
+    height: 35px;
+    border: none;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px gray;
+    background: #222;
+    color: white;
+}
