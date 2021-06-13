@@ -9,13 +9,30 @@
 {% if projects.length != 0 %}
     <h1>Project</h1>   
     {% for project in projects %}
-        <li>{{project.name}}</li>
+        <div class="project">
+            <div class="card">
+                <div class="front">
+                    <img src="../../uploads/{{project.img}}">
+                </div>
+                <div class="back">
+                    <h3>Project Name</h3>
+                    {{project.name}}
+                    <h3>Project Description</h3>
+
+                    <li>{{project.description}}</li>
+                    <h3>Project Github URL</h3>
+                    <a href="{{project.giturl}}">URL</a>
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </div>
+        </div>
     {% endfor %}
 {% else %}
     <h1>Please add projects</h1>
 {% endif %}
-<button id="add_project"> Add Project</button>
 </section>
+<button id="add_project"> Add Project</button>
 {% endblock %}
 
 {% block script %}
