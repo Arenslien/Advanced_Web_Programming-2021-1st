@@ -3,7 +3,7 @@ section {
     padding: 30px;
 }
 h1 {
-    font-size: 100px;
+    font-size: 80px;
 }
 h2 {
     font-size: 50px;
@@ -11,6 +11,7 @@ h2 {
 
 /* project - index.html에 대한 css */
 button#add_project {
+    position: fixed;
     width: 400px;
     height: 100px;
     border: none;
@@ -18,8 +19,10 @@ button#add_project {
     font-size: 50px;
     transition: all ease 200ms 100ms;
     margin: 50px 30px;
+    right: 0px;
+    bottom: -10px;
 }
-button:hover {
+button.add:hover {
     background-color: black;
     color: white;
     cursor: pointer;
@@ -27,8 +30,11 @@ button:hover {
 
 /* project box에 대한 css */
 
-div.project{
+div.gallery {
     position: relative;
+}
+
+div.project{
     width:600px;
     height:300px;
     margin: 30px 0px;
@@ -54,30 +60,64 @@ div.back {
 div.card:hover {
     transform: rotateY(180deg);
 }
-div.card, img {
+div.card, img.main{
     background-color: black;
     border-radius: 20px;
 }
 
-img {
+img.main {
     width: 600px;
     height: 300px;
     object-fit: cover;
 }
 
-h3 {
+h3.title {
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+a.git {
+    transition: all 0.5s ease;
+}
+a.git:hover {
+    color: green;
 }
 
-
-
-
-
-
+form.edit, form.remove {
+    display: inline-block;
+    position: absolute;
+    bottom: -40px;
+}
+form.edit {
+    left: 400px;
+}
+form.remove {
+    left: 480px;
+}
+button.edit, button.remove {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+img.edit, img.remove {
+    width: 50px;
+    height: 50px;
+}
+button.edit:hover {
+    background-color: green;
+}
+button.remove:hover {
+    background-color: orangered;
+}
+input.id {
+    display: none;
+}
 
 /* addProject.html에 대한 css */
-form {
+form.addProject, form.editProject {
     background: white;
     margin: 0px auto;
     margin-top: 30px;
@@ -94,7 +134,7 @@ p {
     font-size: 20px;
     margin-bottom: 10px;
 }
-input {
+input.basic {
     width: 1020px;
     height: 40px;
     margin-bottom: 10px;
@@ -110,7 +150,7 @@ input[type='file'] {
     color: black;
 }
 
-button#addProject {
+button#addProject, button#editProject {
     width: 1044px;
     height: 35px;
     margin: 0px auto 20px auto;

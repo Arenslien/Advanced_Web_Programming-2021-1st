@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block style %}
+<link type="text/css" rel="stylesheet" href="../css/project.css">
+{% endblock %}
+
+{% block main %}
+<section>
+    <h2>Edit Project</h2>
+    <form class="editProject" action="/project/edit" method="POST" onsubmit="return validifyForm()" enctype="multipart/form-data">
+        <p>Project Name</p>
+        <input class="basic" type="text" placeholder="name" name="name" value="{{project.name}}">
+        <p>Description</p>
+        <input class="basic" type="text" placeholder="Description" name="description" value="{{project.description}}">
+        <p>Github URL</p>
+        <input class="basic" type="url" placeholder="giturl" name="giturl" value="{{project.giturl}}">
+        <p>Project Image</p>
+        <input class="basic" id="file" type="file" name="img" accept="image/*">
+        <input class="id" type="text" name="id" value={{project.id}}>
+
+        <button id="editProject" type="submit">Submit</button>
+    </form>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/project/editProject.js"></script>
+{% endblock %}

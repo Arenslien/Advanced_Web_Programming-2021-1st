@@ -5,5 +5,4 @@ router.get('/', (req, res) => {
     res.render('skill/index');
 });
 
-
 module.exports = router;

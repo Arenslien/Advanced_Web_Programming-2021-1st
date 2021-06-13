@@ -1,9 +1,12 @@
+// Import Modules
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 
+// Import Models
 const User = require('../models/user');
 
+// setting local strategy
 module.exports = () => {
     passport.use(new LocalStrategy({
         usernameField: 'id',

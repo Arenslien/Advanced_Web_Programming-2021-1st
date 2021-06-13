@@ -7,15 +7,15 @@
 {% block main %}
 <section>
     <h2>Add Project</h2>
-    <form action="/project/add" method="POST" onsubmit="return validifyForm()" enctype="multipart/form-data">
+    <form class="addProject" action="/project/add" method="POST" onsubmit="return validifyForm()" enctype="multipart/form-data">
         <p>Project Name</p>
-        <input type="text" placeholder="name" name="name">
+        <input class="basic" type="text" placeholder="name" name="name">
         <p>Description</p>
-        <input type="text" placeholder="Description" name="description">
+        <input class="basic" type="text" placeholder="Description" name="description">
         <p>Github URL</p>
-        <input type="url" placeholder="giturl" name="giturl">
+        <input class="basic" type="url" placeholder="giturl" name="giturl">
         <p>Project Image</p>
-        <input id="file" type="file" name="img" accept="image/*">
+        <input class="basic" id="file" type="file" name="img" accept="image/*">
         <button id="addProject" type="submit">Submit</button>
     </form>
 </section>
