@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // 소켓을 생성
+        const socket = io.connect();
+
+        // 소켓 이벤트 연결
+        socket.on('connect', () => {
+            alert('소켓 서버와 연결');
+        });
+
+        socket.on('news', (msg) => {
+            document.writeln('<div>' + msg + '</div>');
+            // socket.emit('reply', 'Hello, Socket.IO Client!');
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

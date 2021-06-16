@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>소켓 테스트</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <input type="button" id="button" value="echo">
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // 소켓을 생성
+        const socket = io.connect();
+
+        // 소켓 이벤트 연결
+        socket.on('connect', () => {
+            alert('소켓 서버와 연결');
+        });
+
+        socket.on('welcome', (msg) => {
+            console.log(msg);
+        });
+
+        socket.on('echo', (msg) => {
+            console.log(msg);
+        });
+
+        document.getElementById('button').onclick = () => {
+            let text = document.getElementById('text').value;
+            socket.emit('echopush', text);
+        }
+
+        socket.on('news', (msg) => {
+            document.writeln('<div>' + msg + '</div>');
+            // socket.emit('reply', 'Hello, Socket.IO Client!');
+        });
+    </script>
+</body>
+
+</html>
